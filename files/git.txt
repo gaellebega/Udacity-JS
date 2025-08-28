@@ -1,0 +1,1 @@
+on the github when we have ignored some files there is no need to make the git npm install

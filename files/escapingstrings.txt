@@ -1,0 +1,240 @@
+what is the escaping strings?
+
+these means adding a special characters called escape characters
+we may use them for the quotations inside a string
+
+We have only 5special characters
+they are "",'',/t,/n,//
+
+2. comparing strings
+to compare the strings we use the arithematic  operator such as ==,===,!== and many others
+
+3.Boolean Variable
+the Boolean variable is a variable that takes either true or false
+
+4.learn the difference between null ,nan and undefined
+nan means not a number this is 
+undefined this is the error we get because a variable is not defined or declared;
+null is the error we get when we assign our valur to empty string;
+
+5. We have 2 types of javascript datatype
+
+the first one is primitive dataype and non-primitive
+ 1. the primitive dataype is the one that can not be changed after it was created.
+
+ it is divided into 7 
+ string,null,numbers,boolean, undefined, 
+ BigInt(ES11) which is used to create large integer numbers greater than the normal range of the numbers,
+ Symbols(ES7)  which is used to create the unique  ids
+
+ The non-primitive datatypes are the ones that are reference to the memory location
+ they are objects, arrays, functions and the special notes which are used to check the type of a number
+
+CONDITIONALS
+
+when we are using the if statement the else need the if ,if not then you are gonna get the sysnthax error
+
+the double equal compares the type only but the triple equal compares only the types and the values
+ 
+ the difference between the advanced conditionals and the normal consitionals the normal conditions are the one with if statements and else while the advanced one include
+switch, terinaty operator,nested conditions like they combine multiple conditions together.
+
+the truthy and falsy values we have 7 falsy values
+0,NaN,undefined,null,-0,false,"" and the other that are remaining are the truthy values
+
+LOOPSS
+we have like 5 loops the for loop,while,do while,for of, and for in. these are the normal for loops.
+
+we also have the advanced loops they are the  forEach(), map(), filter(), and reduce() for arrays.
+
+while loop
+the loops are in 3 parts 
+when to start, what to do, then the increment like how to get to get the next the next item.
+
+THE GOLDEN RULE WHEN WE ARE USING THE LOOPSS
+if you are using like and or inside the loop first check them before anything else then go to the next.
+
+for loop
+for(start;stop;step){
+//condition
+}
+the nested loop is the loop inside another loop
+here is the sysnthax
+for(
+  //condition
+){
+  for(){
+   //condition 
+  }
+}
+
+DIFFERENCE BETWEEN FOR IN AND FOR OF
+
+FOR IN
+The purpose of the for in is to loop throught the keys (property names),and the values
+of an object.
+we use the for in in the objects and the arrays
+
+for (let key in object) {
+    // use key here
+}
+
+FOR OF
+we use the for of when we want to get items one by one
+it is the simple way we can use when we want to display the items in cleanest way
+
+for (let element of iterable) {
+    // use element here
+}
+
+FUNCTIONS 
+ these are block of code aimed to perform a specific task
+
+we have the parametwes and the arguments parameters are the variables and the arguments are the ctual values to the placeholders.
+
+RETURN and THE CONSOLE
+
+when we are using the console it doesnt store naything but when we use the return it stores everyhting
+using the console is like speaking out loud without keeping anything but using the reutn is like givig someone letter to be used later
+so better use the reutn ratherr than the console,
+return also let us use the values for the program use the return when we are dealing with keeping the values and make the reusable variable;
+
+THE WAY OF USING THE REVERSE
+
+
+FUNCTION METHODS
+
+
+SCOPE IN FUNCTIONS
+where in your code you can access a variable
+
+we have 3 scopes of variables
+
+GLOBAL
+a variable out of a function can be accessed anywhere in the program.
+
+LOCAL
+a variable inside of function can be used inside of function.
+
+Block scope(ES6: let and const)
+variable declared inside the culrly braces with the let and const.
+
+
+NESTED scopes
+
+functions inside functions can use the variables from the outer scopes
+NB// the inner function can access the outer functions not the opposite on the  nested scopes
+
+
+SHADOWING IN JS
+
+shadowing happens when you create a variable name in an inner scope(like a block,function, or loop) that has same name as a variable in the outer scope.
+thinking it like standing in someone's shadow.
+
+in shadowing the js will use the inner variable not the outer variable
+hiding in shadowing means while you are inside the scope the js use the inner variable not the outer one
+//NB: when we make the variable to var we no longer used it again
+
+Shadowing in functions → means you can reuse a variable name inside a function without destroying the one outside.
+
+HOISTING 
+this means moving the declaration to the top of the scope before code runs
+the hoisting takes the variable at the top not the assignment
+
+ when we make like the hoisting of the function the js itself make it the normal way like making the reverse then it give out the output.
+ hoisting with the let and const give us the error
+ let and const are hoisted too, but they live in something called the Temporal Dead Zone (TDZ) until the line they are declared.
+
+ var → hoisted, set to undefined.
+
+let & const → hoisted, but “locked” in TDZ until declaration.
+
+Functions → hoisted fully (safe to call before writing them).
+Hoisting is just how JavaScript works internally.
+It always happens behind the scenes when JS prepares your code before running it.
+Always declare your variables at the top of their scope (block or function).
+
+Don’t write code that relies on hoisting, except for functions it’s common and safe
+
+✅ So the meaning is:
+
+Hoisting is not a feature you call, it’s a rule of how JS reads your code.
+
+Its role is to make variables/functions exist in memory before code runs.
+
+It mostly helps if you declare things later but want to use them earlier (especially functions).
+
+FUNCTION EXPRESSION
+when a function is decalred inside the variable
+this refers to passing variable directly to function
+
+in the real life application
+
+1.callbacks
+setTimeout(function(){
+  console.log("Runs after 2 seconds")
+,2000});
+
+2.Event listeners
+
+buttons.addEventListener("Click",function({
+  console.log("Button Clicked)
+}))
+
+3.function programming
+
+const numbers =[1,2,3];
+const double=number.map(function(n){
+  return n*2;
+});
+
+4.Returning Functions(closures)
+Function makeMultiplier(x){
+  return function(y){
+    return x*y;
+  }
+
+  }  
+  const double=makeMultiplier(2)
+
+console.log(double(5));
+
+only the variable in the function expression are hoisted not the whole function when it hoisted it couse the error
+// ❌ Error: Cannot access 'sayHi' before initialization
+
+FUNCTION callbacks
+
+function passed inside another as a parameter is called inside that function is called a callback function
+function that you pass as an argument to another function and gets called inside that function.
+
+why do we use the call backs
+to run a given condition after something else happens like to fetsch dat from a server
+
+INLINE FUNCTION EXPRESSION
+
+An inline function is when you write the function directly inside the call, without naming it.
+is function you define inside a variable instead of giveing it a name
+WHY DO WE USE ANONYMOUS INLINE FUNCTION?
+
+
+
+ARRAYS
+is special stype of an object in js that stire data of orderded values
+the values can be numbers, strings functions even other arrays(nested arrays)
+
+METHODS 
+A method in JavaScript is simply a function that belongs to an object.
+
+called using:
+
+objectname.methodname();
+ex:person.sayHello();
+in simple words method is a function inside an object.
+
+what are Template Literals
+these are the strings wrapped in backsticks
+
+they allow:
+1.interapolation:embending variables direactly with ${}.
+2.Multiline strings: no need for \n
+3.expressions inside strings:you can do even maths or call functions.
