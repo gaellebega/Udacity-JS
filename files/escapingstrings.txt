@@ -231,6 +231,18 @@ objectname.methodname();
 ex:person.sayHello();
 in simple words method is a function inside an object.
 
+the js methods are divided into parts
+
+1, String methods
+2, Arrays methods
+3, Number methods
+4, Objects methods
+5, Global /Utillity methods
+
+
+
+
+
 what are Template Literals
 these are the strings wrapped in backsticks
 
@@ -238,3 +250,9 @@ they allow:
 1.interapolation:embending variables direactly with ${}.
 2.Multiline strings: no need for \n
 3.expressions inside strings:you can do even maths or call functions.
+
+slice and  substring 
+the indexOf("substring")take the first index of the characters
+but the lastIndexOf("substring") take the last index of the substring
+
+the difference between both are methods that kinda work the same but the slice also works with the negative but the substring dont
