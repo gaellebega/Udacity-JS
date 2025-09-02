@@ -15,11 +15,12 @@ the Boolean variable is a variable that takes either true or false
 4.learn the difference between null ,nan and undefined
 nan means not a number this is 
 undefined this is the error we get because a variable is not defined or declared;
-null is the error we get when we assign our valur to empty string;
+null is the error we get when we assign our value to empty string;
 
 5. We have 2 types of javascript datatype
 
-the first one is primitive dataype and non-primitive
+the first one is primitive dataype and non-primitive 
+
  1. the primitive dataype is the one that can not be changed after it was created.
 
  it is divided into 7 
@@ -255,4 +256,44 @@ slice and  substring
 the indexOf("substring")take the first index of the characters
 but the lastIndexOf("substring") take the last index of the substring
 
-the difference between both are methods that kinda work the same but the slice also works with the negative but the substring dont
+the difference between both are methods that kinda work the same but the slice also works with the negative but the substring don't
+
+ METHODS in JS
+ the metods are divided into 5 categories
+ 1,string methods
+ 2,arrays methods
+ 3,numbers methods
+ 4,objects methods
+ 5,arrays methods
+
+
+1.String methods
+these are used that are mainly used on the strings only
+callthe variable.length:it is used to count the numbers of the characters
+.toUpperCase():conevert to uppercase
+.toLowerCase():used to convert to toLowerCase
+.charAt(index):used to get the character at agiven index
+.includes(substring):this is used to check if the substring is included in a given string and it return the boolean t ot false
+.indexOf(substring):First occurence index of the substring
+.lastIndexOf(sunstring):last occurence of a substring
+.slice(start,end):start at the index that you have said and end at before the index that you have said.
+.slice(4)//on the slice when they have said only the one digit that is to mean that is where that you are gonna start and end to the last digit
+.split(""):then when it is like this it take every single character
+.split( ):when there is no space in a string it take it as one string
+.split(" "): when its  splits(make the stop to create the array) at the space.
+.substring(start, end):work the same as the slice but the small difference is the substring can work with also the negative numbers but this cant.
+.replace(search, replace):this take the first value of the character it want and replace it with another one
+.trim():is used to remove spaces at the start and the end.
+
+
+Numbers methods
+
+.toFixed(n):changes the numbers to strings with the n decimals
+.toString:changes the numbers to string
+Number.isInteger(value):this is used to check if a given number is an integer
+parseInt(string):convert string to an integer
+parseFloat(string):convert string to float
+
+when we are dealing with the parseInt it read our strings from the left to right that is whay when you make something like this "abc123" tou will get the error but when you make something like this "123abc" then you are not to get any error
+:: when it finds something invalid like a,b,c it stops from there and returns what it has so far so that is when if the first character is invalid then is gonna return NAN
+
