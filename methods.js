@@ -84,3 +84,33 @@ console.log(parseFloat("12.45"));
 
 
 //THE ARRAYS METHODS
+//the push is used to push the afray to the last index
+
+let arr =["banana", "apple","mango","pineple"]
+let resul=arr.push("umwembe")
+console.log(resul,arr);
+
+let another=[1,2,3,4,5];
+let solution=another.pop();
+console.log(solution,another);
+//this is used to remove the remove the first elemnt of the array
+let arr2=[1,4,6,7,0]
+let sl=arr2.shift();
+console.log(sl,arr2);
+
+let arr3=["a","b","c","d"];
+let answer=  arr3.unshift("A");
+console.log(answer,arr3)
+//is used to find the index of a given array
+console.log(arr3.indexOf("a"))
+//to check if a given element exist inside the array
+console.log(arr.includes(0));
+//the slice is used to give the elemrnt between a given range in array
+console.log(arr3.slice(0,3));//the first is included(inclusive) then the last is excluded(exclusive) to mean here will start from the elemnt in the index 0 then end in the element in the index 2
+
+const bigNames=["uwiamana","akabuto","akimana"];
+// let response=bigNames.slice(0,1);
+// console.log(response);
+
+console.log(bigNames.splice(0,1));
+//is used to fist point the element then the second delete those then what are the replacements like the elemnts that you want to replace there
