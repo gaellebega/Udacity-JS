@@ -297,3 +297,26 @@ parseFloat(string):convert string to float
 when we are dealing with the parseInt it read our strings from the left to right that is whay when you make something like this "abc123" tou will get the error but when you make something like this "123abc" then you are not to get any error
 :: when it finds something invalid like a,b,c it stops from there and returns what it has so far so that is when if the first character is invalid then is gonna return NAN
 
+Array methods
+.push:is used to push the array to the last index but also
+//to add something at the end of an array we use the .length method
+console.log(rainbow.splice(rainboow.length,0,"purple"));
+.pop:is used to remove the first element of the array;
+.shift:
+.unshift:to add an element at first index of an array
+.indexOf:is used to find the index of an array.
+.includes:is used to check if the given element or character or substring exist in the array
+.slice:is used to give elements beyween a given range the first is included and the other is excluded
+.splice:it return the removed items not the items to be removed.
+fist point the index of an elements to be removed then starting from that index how many elemnts to be removed then what to replace or what are we gonna use to modify our array.
+.concat:is used to join the array substring with the other like you have an array and then you wanna add some elemnts you can use the concat then all they can beocme one
+.join:used when we want to join the the array to make one string usig whatever the separator depending on your choices it can be like .,-,|;
+
+NB:this also are not the string but quite important to know
+
+for of:in js for of means the loop that lets you go through the values inside something that is iterable this can be strings, arrays , maps,sets and more
+it only takes the propersty of an object one by one
+
+for in:is used to loop through the indexes of the loops then print out the indexes of the array.
+
+.forEach:is used to give the index,element and the full array depned on what you want

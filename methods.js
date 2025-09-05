@@ -3,6 +3,7 @@
 //the String methods
 let greetings="  Hello World  ";
 //by using the length we dontt add the 2 brackets
+//when we got the nested arrays to find the lendth we count the elemt inside the array as one by one then if we got like 3 other arrays so to mean the length is gonna be 3
 console.log(greetings.length);
 //it is used to remove the spaces at the beginning and at the end not in the middle
 console.log(greetings.trim())
@@ -93,7 +94,7 @@ console.log(resul,arr);
 let another=[1,2,3,4,5];
 let solution=another.pop();
 console.log(solution,another);
-//this is used to remove the remove the first elemnt of the array
+//this is used to remove the first element of the array
 let arr2=[1,4,6,7,0]
 let sl=arr2.shift();
 console.log(sl,arr2);
@@ -106,11 +107,98 @@ console.log(arr3.indexOf("a"))
 //to check if a given element exist inside the array
 console.log(arr.includes(0));
 //the slice is used to give the elemrnt between a given range in array
+//to mean is used to print out the given pat of the array
 console.log(arr3.slice(0,3));//the first is included(inclusive) then the last is excluded(exclusive) to mean here will start from the elemnt in the index 0 then end in the element in the index 2
 
-const bigNames=["uwiamana","akabuto","akimana"];
-// let response=bigNames.slice(0,1);
-// console.log(response);
+const bigNames=["uwiamana","akabuto","mukesha"];
+let response=bigNames.slice(0,1);
+console.log(response);
 
-console.log(bigNames.splice(0,1));
-//is used to fist point the element then the second delete those then what are the replacements like the elemnts that you want to replace there
+console.log(bigNames.splice(1,2));
+//it return the rmoved items not the items to be removed
+//it delete the element starting from the index mentioned before, to mean it say start from 1 delete 2 elements
+//is used to first point the element then the second delete those then what are the replacements like the elemnts that you want to replace there
+let click=["patrick","mugisha","diodene","jean-paul","manzi"]
+let removed=click.splice(2,2)
+console.log(removed);
+
+let anotherClick=["Rocky","Irene","Junior","The Premier"];
+let remove=anotherClick.splice(3,2)//the output is gonna be the premier
+console.log(remove);
+
+let anotherGroup=["mom","dad","kel","gaga","lolo","gali","g-mere"];
+console.log(anotherGroup.splice(2,2,"lionel","pamella"));
+console.log(anotherGroup);//kel and gaga is gonna be the output
+//used to join the arrays substring with the other
+let fisrtNames=["jose","mike","annie","clare"];
+console.log(fisrtNames.concat(["ange","amina"]));
+
+const a=["names:","uwase"]
+const b=["class:","p5B"]
+console.log(a.concat(b));
+//used to join the array to string uisng whatever the separator you choose
+console.log(fisrtNames.join("-"))
+console.log(fisrtNames.join("."))
+console.log(fisrtNames.join("|"));
+
+//THE FOR OF
+//the for of in js means the loop that lets you go through the values inside something that is iterable
+//this can be arrays,strings, maps, sets and more
+//it take the property of the object
+const basket=["apple","mango","banana"];
+for (let fruits of basket){
+  console.log(fruits);
+}
+
+const string="hello Ga";
+//even its gonna print out the space
+for (let singlechar of string){
+  console.log(singlechar);
+}
+for ( var char of "mamy"){
+  console.log(char);
+}
+//forin is used to loop through the indexes of the loops
+//these are not methods but the special loop contrust
+const colors=["orange","red","blue","green","yellow"]
+for(index in colors){
+  console.log(index);
+}
+for(let color of colors){
+  console.log(color);
+}
+//the method is for each
+//is used to give the index, element and the full array
+//first you write the array then the for each then you open the bracket
+// Array.forEach(function(element,index,array){
+// console.log("Index",index,"Value",element,"Full array:",array)
+// });
+
+let urClasses=["muhazi","muhabura","unipod","ikaze"];
+urClasses.forEach(function(element,index,urClasses){
+  console.log("index:",index,"value:",element,"full array:",urClasses)
+})
+
+let bigGang=["akabuto","mukesha","uwimana"];
+bigGang.forEach(function(element,index,array){
+  console.log("index:",index,"value:",element,"full array:",array)
+})
+//how the map works
+
+// array.map(function(element,index,array){
+  //it is used to create new array by applying function to each element of the original array
+  //return something (this will go into the new array)
+// })
+
+//example in usage
+const numbers=[1,2,3,4];
+const doubled=numbers.map(num=>num*3);
+console.log(doubled);
+
+const students=[
+  {name:"lorraine",age:20},
+  {name:"Eddha",age:20},
+];
+//here you can write students or even s as long as yo have written s.
+const namels=students.map(s=>s.name);
+console.log(namels);
