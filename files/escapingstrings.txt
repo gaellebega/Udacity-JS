@@ -121,7 +121,7 @@ Block scope(ES6: let and const)
 variable declared inside the culrly braces with the let and const.
 
 
-NESTED scopes
+NESTED SCOPES
 
 functions inside functions can use the variables from the outer scopes
 NB// the inner function can access the outer functions not the opposite on the  nested scopes
@@ -240,10 +240,6 @@ the js methods are divided into parts
 4, Objects methods
 5, Global /Utillity methods
 
-
-
-
-
 what are Template Literals
 these are the strings wrapped in backsticks
 
@@ -305,18 +301,30 @@ console.log(rainbow.splice(rainboow.length,0,"purple"));
 .shift:
 .unshift:to add an element at first index of an array
 .indexOf:is used to find the index of an array.
-.includes:is used to check if the given element or character or substring exist in the array
+.includes:is used to check if the given element or character or substring exist in the array.
+shift() will remove the first element from an array.
+splice() can be used if you specify the index of the first element, and indicate that you want to delete 1 element.
 .slice:is used to give elements beyween a given range the first is included and the other is excluded
 .splice:it return the removed items not the items to be removed.
 fist point the index of an elements to be removed then starting from that index how many elemnts to be removed then what to replace or what are we gonna use to modify our array.
 .concat:is used to join the array substring with the other like you have an array and then you wanna add some elemnts you can use the concat then all they can beocme one
 .join:used when we want to join the the array to make one string usig whatever the separator depending on your choices it can be like .,-,|;
-
+.reverse:is used to changae the order of the elements the fist become the last like that nad the second become second to last also it is used to change the original array to new array.
+.sort:is used to sort the elements alphabetically
 NB:this also are not the string but quite important to know
 
-for of:in js for of means the loop that lets you go through the values inside something that is iterable this can be strings, arrays , maps,sets and more
+for of:these are the js loops in js for of means the loop that lets you go through the values inside something that is iterable this can be strings, arrays , maps,sets and more
 it only takes the propersty of an object one by one
 
-for in:is used to loop through the indexes of the loops then print out the indexes of the array.
+for in: these are js loops that is used to loop through the indexes of the loops then print out the indexes of the array.
+forEach:is used to give the index,element and the full array depned on what you want
+when you want to do something with each item but not return anything. it doesnt create a new array it just for like printing and updating
 
-.forEach:is used to give the index,element and the full array depned on what you want
+
+.filter: is used to select th egiven elemts from the array of elements
+by creating a new array from the existing array
+
+ .reduce: we use this method when we want to combine different items in one value like sum,object,string and string.
+ it is used to reduce the whole array into a single value.
+ it si like you have a basket and then inside the basket(accumulator) it is empty but you have an array that have everything and then you take what is inside the array and you transfer it into one array then in the end you got one thing thats it
+//uing the .reduce it is bery shorter but even more consise and straight to the point , also it can create an object from an array but the normal for can not do that
