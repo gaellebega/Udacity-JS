@@ -321,10 +321,45 @@ forEach:is used to give the index,element and the full array depned on what you 
 when you want to do something with each item but not return anything. it doesnt create a new array it just for like printing and updating
 
 
-.filter: is used to select th egiven elemts from the array of elements
+.filter: is used to select the given elemts from the array of elements by pass thorugh a test like by aking t or f
 by creating a new array from the existing array
 
  .reduce: we use this method when we want to combine different items in one value like sum,object,string and string.
  it is used to reduce the whole array into a single value.
- it si like you have a basket and then inside the basket(accumulator) it is empty but you have an array that have everything and then you take what is inside the array and you transfer it into one array then in the end you got one thing thats it
-//uing the .reduce it is bery shorter but even more consise and straight to the point , also it can create an object from an array but the normal for can not do that
+ it si like you have a basket and then inside the basket(accumulator) it is empty but you have an array that have everything and then you take what is inside the array and you transfer it into one array then in the end you got one thing thats it.
+
+//using the .reduce it is very shorter but even more consise and straight to the point , also it can create an object from an array but the normal for can not do that
+
+array methods that are applied on the objects we have filter,reduce,map and forEach
+
+OBJECT METHODS
+
+first of all when you want to get the keys you write them and also when you want to get the values you write them like this Object.keys and this Object.values
+also the combination of the key and values is called the entries
+
+when you want to get the array of the nestedarrays when we want to get the vlues we use this method of the object that is called Object.fromEntries;
+
+when you want to merge the object you may use this method
+
+the difference between entries and the properties 
+properties might be the key and the values
+entries is the combination of the keys and the values that are combined together inside an array of an arrays.
+
+Object.assign(target,sources)
+the souces are the other 2 objects and the target is where the objects are gonna be kept.
+
+you dont have to repeat the keys cz if you do it is gonna overwrites them bcz they are the duplicates
+
+Object.freeze 
+it helps to ignore the modifications made on the objects like add remove change and many others
+when that method comes first there is gonna be no changes
+but when changes made then the object made afer its gonna ignore the change and the object stays the way it is.
+
+Object.seal(obj)
+it prevents the adding/removing the properties but allowing the changes to the specific existing values mentioned
+it is used to update the existing values of the objects not to remove or delete
+to check if the object has own properties we use this
+
+
+Object.hasOwn(obj,prop)
+this is used to check if the object has some properties like to check if the given property is included in an object
