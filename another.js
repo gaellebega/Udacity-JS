@@ -4,10 +4,12 @@ let person1={
   location:"kacyiru",
   siblings:2
 }
+//to mean display the keys
 for(key in person1){
   console.log("key:",key);//here is going to display  the key with the name of the key
   console.log("value:",person1[key])//this means take the value of each key
 }
+
 let person2={
   name:"uwase",
   age:30,

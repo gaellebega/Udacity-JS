@@ -363,3 +363,5 @@ to check if the object has own properties we use this
 
 Object.hasOwn(obj,prop)
 this is used to check if the object has some properties like to check if the given property is included in an object
+
+the proto means the link to the object inside another
