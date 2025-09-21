@@ -1,5 +1,12 @@
-on the github when we have ignored some files there is no need to make the git npm install
 
-to pull the data on main brunch you have to make this 
+📌 GitHub Clarifications
+
+on the github when we have a folder or files listed in .gitignore some files it wont be uploaded to github 
+that is why when you clone you have to run  npm install.
+ 
+
+to pull the data on main brunch you have to make this :
+
 git pull origin main --rebase 
-when they say that you have instaeged chages that mean that you have made some changes but not pushed to github
+when they say that you have staged chages that mean that you have made some changes but not pushed to github
+

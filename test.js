@@ -61,3 +61,32 @@ console.log(name6.split(" "));
 
 const names="my names are uwimana angelique"
 console.log(names.replace("anagelique","ange"));
+
+// isOpen===false; //this is the property data same as you can write name="nadia" all of those are the properties
+
+function open(){
+  //this is the normal function so to mean it doesnt belong anywhere
+  console.log("we have a meeting under umbrella:)")
+}
+open();
+//this is the function inside the object method so as to belong to the specific
+// open:function(){
+  
+// }
+
+
+
+var umberella={
+  name:"red-umbrella",
+  location:"kigali",
+  isopen:false,
+  open:function(){
+    if(umberella.isopen===true){
+    return "the rain will be on you" ;
+    }
+    else if(umberella.isopen===false){
+      return "lucky you the rain is not gonna be on youu!!"
+    }
+  }
+}
+umberella.open();
