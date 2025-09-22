@@ -76,17 +76,45 @@ open();
 
 
 
-var umberella={
-  name:"red-umbrella",
+// var umberella={
+//   name:"red-umbrella",
+//   location:"kigali",
+//   isopen:false,
+//   open:function(){
+//     if(umberella.isopen===true){
+//     return "the rain will be on you" ;
+//     }
+//     else if(umberella.isopen===false){
+//       return "lucky you the rain is not gonna be on youu!!"
+//     }
+//   }
+// }
+// umberella.open();
+var umbrella={
+  color:"red",
+  isOpen:true,
   location:"kigali",
-  isopen:false,
+
   open:function(){
-    if(umberella.isopen===true){
-    return "the rain will be on you" ;
+    if(this.isOpen === true){
+      return "your umbrella is already opened"
     }
-    else if(umberella.isopen===false){
-      return "lucky you the rain is not gonna be on youu!!"
+    else{
+      this.isOpen=true;
+      return"Juila opens the umbrella";
     }
+  },
+  close:function(){
+if (this.isOpen === false){
+  return "your umbrella is closed";
+}
+else{
+  this.isOpen=false;
+  return"make double check about your umbrella";
+}
   }
 }
-umberella.open();
+console.log(umbrella.open());
+console.log(umbrella.open());
+console.log(umbrella.close());
+console.log(umbrella.close());

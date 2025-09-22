@@ -18,3 +18,4 @@ life={
 }
 console.log("key:",key);
 console.log("Value",life[key]);
+
