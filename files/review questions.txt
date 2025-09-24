@@ -1,0 +1,213 @@
+A. Variables & Data Types
+
+1. Difference between var, let, and const?
+
+var: function-scoped, can be redeclared and updated, hoisted.
+
+let: block-scoped, can be updated but not redeclared in same scope.
+
+const: block-scoped, cannot be redeclared or reassigned (but objects/arrays can still be mutated).
+
+2. Difference between undefined and null?
+
+undefined: a variable that has been declared but not assigned a value.
+
+null: an intentional “empty” or “nothing” value set by the programmer.
+
+3. Primitive data types in JavaScript?
+
+string, number, boolean, undefined, null, symbol, bigint.
+
+4. Is JavaScript statically typed or dynamically typed?
+
+Dynamically typed → variable types are determined at runtime.
+
+5. What does typeof null return? Why?
+
+Returns "object" (this is a known bug in JavaScript from its early days).
+
+B. Operators
+
+6. Difference between == and ===?
+
+== → loose equality, compares values after type conversion.
+
+=== → strict equality, compares both value and type.
+
+7. Results of the code:
+
+console.log(5 + "5");   // "55" (string concatenation)
+console.log("10" - 2);  // 8   ("10" converted to number)
+console.log(true + 1);  // 2   (true → 1)
+console.log(false == 0);// true (false → 0)
+
+
+8. What does ! operator do?
+
+Logical NOT → flips truthy/falsy values.
+
+9. Difference between ++x and x++?
+
+++x → pre-increment, increases first then returns value.
+
+x++ → post-increment, returns value first then increases.
+
+C. Conditionals
+
+10. Program (divisible by 3):
+
+let num = 9;
+if (num % 3 === 0) {
+  console.log("Divisible by 3");
+} else {
+  console.log("Not divisible by 3");
+}
+
+
+11. Falsy values in JS?
+
+false, 0, "" (empty string), null, undefined, NaN.
+
+12. When use switch?
+
+When checking one value against many possible cases, instead of long if-else if.
+
+D. Loops
+
+13. Difference between loops:
+
+for: general-purpose, iterates with index.
+
+for...in: iterates over object keys.
+
+for...of: iterates over iterable values (arrays, strings, etc.).
+
+14. Program (skip multiples of 5):
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 5 === 0) continue;
+  console.log(i);
+}
+
+
+15. How to stop a loop early?
+
+Use break.
+
+E. Functions
+
+16. Function declaration vs expression:
+
+Declaration:
+
+function add(a, b) { return a + b; }
+
+
+(hoisted, can be used before definition)
+
+Expression:
+
+const add = function(a, b) { return a + b; }
+
+
+(not hoisted).
+
+17. Arrow function rewrite:
+
+const add = (a, b) => a + b;
+
+
+18. Output:
+
+function test() {
+  var x = 10;
+  if (true) {
+    let x = 20;
+    console.log(x); // 20 (block scope)
+  }
+  console.log(x);   // 10 (outer scope unaffected)
+}
+
+
+19. Default parameter example:
+
+function greet(name = "Guest") {
+  console.log("Hello " + name);
+}
+
+
+20. Global vs block scope:
+
+Global scope → accessible everywhere.
+
+Block scope ({ }) → variables declared with let/const only accessible inside block.
+
+F. Arrays
+
+21. Adding/removing items:
+
+End: push, pop.
+
+Start: unshift, shift.
+
+22. map, forEach, filter differences:
+
+map: returns a new array with transformed elements.
+
+forEach: iterates but doesn’t return anything.
+
+filter: returns new array with only elements that pass condition.
+
+23. Array tasks:
+
+let arr = [2, 4, 6, 8];
+arr.push(10);                // [2,4,6,8,10]
+arr.shift();                 // [4,6,8,10]
+let doubled = arr.map(x => x * 2); // [8,12,16,20]
+
+G. Objects
+
+24. Dot vs bracket notation:
+
+let person = { name: "Ali", age: 25 };
+console.log(person.name);     // Dot
+console.log(person["age"]);   // Bracket
+
+
+25. this inside an object method:
+
+Refers to the object itself.
+
+26. Example object:
+
+let person = {
+  name: "Ali",
+  age: 25,
+  greet() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+
+27. Shallow vs deep copy:
+
+Shallow copy → copies only first level, nested objects still referenced.
+Example: Object.assign({}, obj) or spread {...obj}.
+
+Deep copy → creates full independent copy, even nested objects (structuredClone or JSON.parse(JSON.stringify(obj))).
+
+H. Bonus (Tricky Intro Questions)
+
+28. What is hoisting?
+
+JS moves variable/function declarations to the top of their scope before execution.
+
+29. Output of:
+
+console.log(a); // undefined (hoisted but not assigned yet)
+var a = 5;
+
+
+30. const obj = {name: "Ali"} vs obj.name = "Sara"?
+
+You cannot reassign obj (e.g. obj = {} ❌), but you can change its properties (obj.name = "Sara" ✅).
