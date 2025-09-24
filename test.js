@@ -118,3 +118,30 @@ console.log(umbrella.open());
 console.log(umbrella.open());
 console.log(umbrella.close());
 console.log(umbrella.close());
+
+
+var facebookProfile={
+  name:"",
+  friends:20,
+  messages:["hy","wanna chat","we are here for you","don't hesitate","reach out to us" ],
+
+postMessage: function(message){
+this.messages.push(message);
+},
+//Remove the message at the given index(0-based)
+deleteMessage: function(index){
+if(index>=0 && index<this.message.length){
+  this.messages.splice(index,1);
+}
+},
+addFriend: function(){
+this.friends += 1;
+},
+removeFriend: function(){
+
+if(this.friends>0){
+  this.friends-=1;
+}
+}
+
+}

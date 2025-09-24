@@ -83,7 +83,7 @@ console.log(parseInt("123.5abc"));
 console.log(parseFloat("12.45"));
 
 //THE ARRAYS METHODS
-//the push is used to push the afray to the last index
+//the push is used to push the array to the last index
 
 let arr = ["banana", "apple", "mango", "pineple"];
 let resul = arr.push("umwembe");
