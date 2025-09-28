@@ -1,9 +1,9 @@
-what is the escaping strings?
+1.what is the escaping strings?
 
 these means adding a special characters called escape characters
 we may use them for the quotations inside a string
 
-We have only 5special characters
+We have only 5 special characters
 they are "",'',/t,/n,//
 
 2. comparing strings
@@ -13,23 +13,33 @@ to compare the strings we use the arithematic  operator such as ==,===,!== and m
 the Boolean variable is a variable that takes either true or false
 
 4.learn the difference between null ,nan and undefined
-nan means not a number this is 
-undefined this is the error we get because a variable is not defined or declared;
+
+nan means not a number :this is  special value that indicates that the computation didnt't return a number.
+undefined this is the error we get because a variable is not defined or declared (assigned to any value);
+
+it is also an error we get when:
+*there is uninitialised variables
+*function with no return
+*accessing the missing property
+*array elements that doesnot exist
+
+
 null is the error we get when we assign our value to empty string;
 
 5. We have 2 types of javascript datatype
 
 the first one is primitive dataype and non-primitive 
 
- 1. the primitive dataype is the one that can not be changed after it was created.
+ 1. the primitive dataype is the one that can not be changed after it was created,it cant change the initaial value only assign.
+ => this means that they cant be changed directly when you want to change them you make reassign them with a new value but you cant modidy it just like that
 
  it is divided into 7 
  string,null,numbers,boolean, undefined, 
  BigInt(ES11) which is used to create large integer numbers greater than the normal range of the numbers,
- Symbols(ES7)  which is used to create the unique  ids
+ Symbols(ES7)  which is used to create the unique  ids because the ids must be uniqre so there is no reason to cahnge it.
 
  The non-primitive datatypes are the ones that are reference to the memory location
- they are objects, arrays, functions and the special notes which are used to check the type of a number
+ they are objects,date, arrays,map,set functions and the special notes which are used to check the type of a number
 
 CONDITIONALS
 

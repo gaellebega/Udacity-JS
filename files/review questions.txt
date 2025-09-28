@@ -19,11 +19,13 @@ null: an intentional “empty” or “nothing” value set by the programmer.
 string, number, boolean, undefined, null, symbol, bigint.
 
 4. Is JavaScript statically typed or dynamically typed?
+typed means how js handles data so when we tyoe like string name ="uwimana" that is statically typed
+dynamically typed means writing a variable without declaring the datatype.
 
 Dynamically typed → variable types are determined at runtime.
 
 5. What does typeof null return? Why?
-
+null was represented as the null pointer which has type tag of 0
 Returns "object" (this is a known bug in JavaScript from its early days).
 
 B. Operators
@@ -31,16 +33,22 @@ B. Operators
 6. Difference between == and ===?
 
 == → loose equality, compares values after type conversion.
+compares value after converting them in the same type
+5=="5" first is gonna take the string then try to change it to number so its gonna return true
 
 === → strict equality, compares both value and type.
-
+does not return the type conversation
 7. Results of the code:
 
 console.log(5 + "5");   // "55" (string concatenation)
 console.log("10" - 2);  // 8   ("10" converted to number)
 console.log(true + 1);  // 2   (true → 1)
 console.log(false == 0);// true (false → 0)
+return value means a value returned when a function or expression produces when it runs
 
+return sends a value out of the function
+
+//return undefined means that there is nothing returned
 
 8. What does ! operator do?
 
@@ -66,11 +74,12 @@ if (num % 3 === 0) {
 
 11. Falsy values in JS?
 
-false, 0, "" (empty string), null, undefined, NaN.
+false, 0,-0, "" (empty string), null, undefined, NaN.
 
-12. When use switch?
+12. When use switch? and if
+we use the if tatemnts when we are checking the  ranges or logical expressions
 
-When checking one value against many possible cases, instead of long if-else if.
+When checking one value against many possible cases, or the specific cases  instead of long if-else if,which also helps our codes to be clean.
 
 D. Loops
 
@@ -88,7 +97,8 @@ for (let i = 1; i <= 20; i++) {
   if (i % 5 === 0) continue;
   console.log(i);
 }
-
+//conties skip the given step and then continues the loop
+//break do exit the loop directly.
 
 15. How to stop a loop early?
 
@@ -130,9 +140,10 @@ function test() {
 
 
 19. Default parameter example:
+default parameter= this is the value you give the  parameter to prevent it from being the unidefined
 
 function greet(name = "Guest") {
-  console.log("Hello " + name);
+  console.log("Hello" + name);
 }
 
 
