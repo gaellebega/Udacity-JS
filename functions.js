@@ -36,6 +36,8 @@ console.log(result9 +" "+ "cm²");
 let string=["Hello World","JavaScript is fun!"];
 string.reverse();
 console.log(string);
+
+
 //function to make the profilt
 function coffeeProfit(sellingPrice, costPrice, quantity){
 return totalProfit=(costPrice-sellingPrice*quantity);
